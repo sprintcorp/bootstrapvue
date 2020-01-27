@@ -1,14 +1,16 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" type="dark" style="background-color: #795ae4;">
+    <b-navbar toggleable="lg" type="dark" style="background-color: #007bff;">
       <b-navbar-brand href="#">NavBar</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav class="offset-5">
-          <b-nav-item href="#">Link</b-nav-item>
-          <b-nav-item href="#" disabled>Disabled</b-nav-item>
+        <b-navbar-nav class="offset-3">
+          <b-nav-item :to="{name:'home'}" class="pr-4">Home</b-nav-item>
+          <b-nav-item :to="{name:'about-us'}" href="about-us" class="pr-4">About us</b-nav-item>
+          <b-nav-item :to="{name:'shop'}" href="#" class="pr-4">Shop</b-nav-item>
+          <b-nav-item :to="{name:'contact'}" href="#" class="pr-4">Contact</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -25,6 +27,10 @@
             <b-dropdown-item href="#">FA</b-dropdown-item>
           </b-nav-item-dropdown>
 
+          <b-nav-item-dropdown text="Cart" right>
+            <b-dropdown-item>Products <b-button variant="outline-danger">X</b-button></b-dropdown-item>
+          </b-nav-item-dropdown>
+
           <b-nav-item-dropdown right>
             <!-- Using 'button-content' slot -->
             <template v-slot:button-content>
@@ -39,7 +45,7 @@
   </div>
 </template>
 
-<script src="./navigation.css"></script>
+<script src="./navigation.js"></script>
 
 <style>
   @import "./navigation.css";

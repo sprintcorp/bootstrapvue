@@ -2,6 +2,7 @@ export default {
   data() {
     return {
       cart:[],
+      product:[],
       slide: 0,
       sliding: null,
       products: [
@@ -61,9 +62,15 @@ export default {
       this.shops = this.products.filter(product =>{
         return product.type === type;
       })
+    },
+    addToCart(shop){
+      this.cart.push(shop);
+    },
+    removeProduct(index){
+      this.cart.splice(index);
     }
   },
-  created(){
+  mounted(){
     this.initialProduct();
   }
 }

@@ -65,37 +65,44 @@
 
           </div>
         </div>
-
+<!--        {{product}}-->
+        <div v-for="(carts,index) in cart" :key="index">
+            <button @click="(index)">Remove {{carts.id}}</button>
+        </div>
         <div class="row">
           <div class=" col-md-12 row pt-5">
             <b-card class="container">
               <b-tabs>
                 <b-tab no-body @click="filerProduct(1)" title="Tab 1">
                   <div class="pt-5 col">
-                    <b-card no-body style="max-width: 500px;"
-                            v-for="shop in shops" :key="shop.id">
-                      <b-row no-gutters>
-                        <b-col md="6">
-                          <b-card-img src="https://picsum.photos/400/400/?image=20" class="rounded-0"></b-card-img>
-                        </b-col>
-                        <b-col md="6">
-                          <b-card-body>
-                            <b-card-title>{{shop.name}}</b-card-title>
-                            <b-card-text>
-                              {{shop.description}}
-                            </b-card-text>
-                            <b-button variant="outline-primary">Add to Cart</b-button>
-                          </b-card-body>
-                        </b-col>
-                      </b-row>
-                    </b-card>
+                    <b-row>
+                      <b-col col md="6" v-for="shop in shops" :key="shop.id">
+                        <b-card no-body style="max-width: 500px;">
+                          <b-row no-gutters>
+                            <b-col md="6">
+                              <b-card-img src="https://picsum.photos/400/400/?image=20" class="rounded-0"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                              <b-card-body>
+                                <b-card-title>{{shop.name}}</b-card-title>
+                                <b-card-text>
+                                  {{shop.description}}
+                                </b-card-text>
+                                <b-button variant="outline-primary" @click="addToCart(shop)">Add to Cart</b-button>
+                              </b-card-body>
+                            </b-col>
+                          </b-row>
+                        </b-card>
+                      </b-col>
+                    </b-row>
                   </div>
                 </b-tab>
 
                 <b-tab no-body @click="filerProduct(2)" title="Tab 2">
                   <div class="pt-5">
-                    <b-card no-body style="max-width: 500px;"
-                            v-for="shop in shops" :key="shop.id">
+                    <b-row>
+                      <b-col col md="6" v-for="shop in shops" :key="shop.id">
+                    <b-card no-body style="max-width: 500px;">
                       <b-row no-gutters>
                         <b-col md="6">
                           <b-card-img src="https://picsum.photos/400/400/?image=20" class="rounded-0"></b-card-img>
@@ -106,11 +113,13 @@
                             <b-card-text>
                               {{shop.description}}
                             </b-card-text>
-                            <b-button variant="outline-primary">Add to Cart</b-button>
+                            <b-button variant="outline-primary" @click="addToCart(shop)">Add to Cart</b-button>
                           </b-card-body>
                         </b-col>
                       </b-row>
                     </b-card>
+                      </b-col>
+                    </b-row>
                   </div>
                 </b-tab>
               </b-tabs>

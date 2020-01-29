@@ -65,10 +65,11 @@
 
           </div>
         </div>
-<!--        {{product}}-->
-        <div v-for="(carts,index) in cart" :key="index">
-            <button @click="(index)">Remove {{carts.id}}</button>
-        </div>
+<!--        {{shops}}-->
+<!--          {{cart.length}}-->
+<!--        <div v-for="(carts,index) in cart" :key="index">-->
+<!--            <button @click="removeProduct(index)">Remove {{carts.id}}</button>-->
+<!--        </div>-->
         <div class="row">
           <div class=" col-md-12 row pt-5">
             <b-card class="container">

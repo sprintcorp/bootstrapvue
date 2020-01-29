@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pt-5">
     <!-- Footer -->
     <footer class="page-footer font-small blue pt-4">
 

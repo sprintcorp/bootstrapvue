@@ -8,7 +8,7 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="offset-3">
           <b-nav-item :to="{name:'home'}" class="pr-4">Home</b-nav-item>
-          <b-nav-item :to="{name:'about-us'}" href="about-us" class="pr-4">About us</b-nav-item>
+<!--          <b-nav-item :to="{name:'view'}" href="about-us" class="pr-4">About us</b-nav-item>-->
           <b-nav-item :to="{name:'shop'}" href="#" class="pr-4">Shop</b-nav-item>
           <b-nav-item :to="{name:'contact'}" href="#" class="pr-4">Contact</b-nav-item>
         </b-navbar-nav>
@@ -45,8 +45,8 @@
             <template v-slot:button-content>
               <em>User</em>
             </template>
-            <b-dropdown-item href="#">Profile</b-dropdown-item>
-            <b-dropdown-item href="#">Sign Out</b-dropdown-item>
+            <b-dropdown-item  :to="{name:'login'}">Sign in</b-dropdown-item>
+            <b-dropdown-item  :to="{name:'register'}">Sign up</b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
@@ -79,6 +79,7 @@
 
       <template v-slot:modal-footer>
         <div class="w-100">
+          <button class="btn btn-light float-left ml-2" @click="clearCart(index,carts)" v-if="carts.length">Clear cart</button>
           <button class="btn btn-light float-right ml-2">Check out</button>
 
           <b-button

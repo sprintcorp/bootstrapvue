@@ -1,6 +1,10 @@
 <template>
-  <div class="container">
-    Contact page
+  <div>
+  <Theheader></Theheader>
+  <div class="container body">
+    Contact page <font-awesome-icon icon="faCoffee" />
+  </div>
+  <Thefooter></Thefooter>
   </div>
 </template>
 

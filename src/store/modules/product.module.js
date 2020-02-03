@@ -1,5 +1,4 @@
 const initialState = {
-    shop: '',
     products: [
         {
             id:1,

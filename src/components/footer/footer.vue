@@ -32,7 +32,7 @@
                 <b-link :to="{name:'home'}">Home</b-link>
               </li>
               <li>
-                <b-link :to="{name:'about-us'}">About us</b-link>
+                <b-link :to="{name:'view'}">About us</b-link>
               </li>
               <li>
                 <b-link :to="{name:'shop'}">Product</b-link>

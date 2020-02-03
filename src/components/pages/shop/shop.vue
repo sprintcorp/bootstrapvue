@@ -1,6 +1,8 @@
 <template>
-  <div class="container">
-<!--    {{shops}}-->
+    <div>
+    <Theheader></Theheader>
+  <div class="container body">
+<!--    {{products}}-->
     <div class="row">
       <div class=" col-md-12 row pt-3">
         <b-card class="container">
@@ -20,15 +22,19 @@
                   <h2 class="card-title">{{shop.name}}</h2>
                   {{shop.description}}.
                 </b-card-text>
+                <b-button :to="{name:'view',params:{id:shop.id}}"  size="sm" class="float-left mr-5">View Details</b-button>
 
-                <b-button @click="addToCart(shop)" variant="primary">Add To Cart</b-button>
+                <b-button @click="addToCart(shop)" size="sm" variant="primary">Add To Cart</b-button>
               </b-card>
             </b-row>
           </div>
         </b-card>
       </div>
     </div>
+    <b-toast visible="toast" v-if="display" no-fade="true" aria-live='assertive'></b-toast>
   </div>
+    <Thefooter></Thefooter>
+    </div>
 </template>
 
 <script src="./shop.js"></script>

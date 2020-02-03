@@ -12,43 +12,43 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="firstName">Firstname</label>
-                            <input type="text" class="form-control" id="firstName">
+                            <input type="text" class="form-control" v-model="firstname" id="firstName">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="lastName">Lastname</label>
-                            <input type="text" class="form-control" id="lastName">
+                            <input type="text" class="form-control" v-model="lastname" id="lastName">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <label>Email</label>
+                            <input type="email" class="form-control" v-model="email">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputPassword4">Password</label>
-                            <input type="password" class="form-control" id="inputPassword4">
+                            <input type="password" class="form-control" v-model="password" id="inputPassword4">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="inputAddress2">Address</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                        <input type="text" class="form-control" id="inputAddress2" v-model="address" placeholder="Apartment, studio, or floor">
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputCity">City</label>
-                            <input type="text" class="form-control" id="inputCity">
+                            <input type="text" class="form-control" v-model="city" id="inputCity">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputState">State</label>
-                            <select id="inputState" class="form-control">
+                            <select id="inputState" v-model="state" class="form-control">
                                 <option selected>Choose...</option>
                                 <option>...</option>
                             </select>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputZip">Zip</label>
-                            <input type="text" class="form-control" id="inputZip">
+                            <input type="text" class="form-control" v-model="zip" id="inputZip">
                         </div>
                     </div>
                     <div class="form-group">
@@ -70,6 +70,7 @@
                     </div>
                     <button type="submit" disabled class="btn btn-outline-primary btn-block" v-if="status === 'false'">Sign in</button>
                     <button type="submit" class="btn btn-outline-primary btn-block" v-if="status === 'true'">Sign in</button>
+                    <b-link class="btn btn-block btn-outline-primary" :to="{name:'login'}">Already have an account. Sign in</b-link>
                 </form>
             </div>
 <!--            <div class="card-footer">User Form</div>-->

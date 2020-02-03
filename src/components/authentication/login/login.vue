@@ -23,7 +23,8 @@
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                 <label class="form-check-label" for="exampleCheck1">Remember me</label>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-block btn-primary mb-2">Submit</button>
+                            <b-link  :to="{name:'register'}" class="btn btn-block btn-outline-primary">Don't have an account. Sign up</b-link >
                         </form>
                     </div>
                     <div class="card-body">
